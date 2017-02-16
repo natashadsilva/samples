@@ -28,7 +28,6 @@
     <div class="header-panel shadow-z-2">
       <div class="social-icons">
         <a class="icon" title="Visit Streamsdev" href="https://developer.ibm.com/streamsdev/"><img id="about" src="./static/img/Streams-32x.png" /></a>
-        <a class="icon" title="View samples on GitHub" data-track-action="Icon" data-track-label="github" target="_blank" href="https://github.com/IBMStreams/samples"><i class="fa fa-github"></i></a>
         <a class= "icon" href="#bottomrow"><img  class="logo-icon" title="Useful links" src="./static/img/arrow.svg" ></a>
 
 </div><h1>IBM Streams Samples Catalog</h1>
@@ -113,10 +112,13 @@
             <button type="button" data-track-action="Filter" data-track-label="3" class="tagFilter btn btn-sm" data-toggle="button" ng-click="toggleTagConfiguration('3', true)">Tips</button>
             <button type="button" data-track-action="Filter" data-track-label="4" class="tagFilter btn btn-sm" data-toggle="button" ng-click="toggleTagConfiguration('4', true)">Monitoring</button>
             <button type="button" data-track-action="Filter" data-track-label="6" class="tagFilter btn btn-sm" data-toggle="button" ng-click="toggleTagConfiguration('6', true)">Correlate and Merge Streams</button>
-            <button type="button" data-track-action="Filter" data-track-label="5" class="tagFilter btn btn-sm" data-toggle="button" ng-click="toggleTagConfiguration('5', true)">Performance and Consistent Regions</button>
+            <button type="button" data-track-action="Filter" data-track-label="5" class="tagFilter btn btn-sm" data-toggle="button" ng-click="toggleTagConfiguration('5', true)">Performance</button>
             <button type="button" data-track-action="Filter" data-track-label="7" class="tagFilter btn btn-sm" data-toggle="button" ng-click="toggleTagConfiguration('7', true)">Analyze and Classify Data</button>
            <button type="button" data-track-action="Filter" data-track-label="8" class="tagFilter btn btn-sm" data-toggle="button" ng-click="toggleTagConfiguration('8', true)">Best Practices</button>
             <button type="button" data-track-action="Filter" data-track-label="9" class="tagFilter btn btn-sm" data-toggle="button" ng-click="toggleTagConfiguration('9', true)">Collections and Data Types</button>
+            <button type="button" data-track-action="Filter" data-track-label="10" class="tagFilter btn btn-sm" data-toggle="button" ng-click="toggleTagConfiguration('10', true)">Operators and Functions</button>
+            <button type="button" data-track-action="Filter" data-track-label="11" class="tagFilter btn btn-sm" data-toggle="button" ng-click="toggleTagConfiguration('11', true)">Consistent Regions</button>
+
 
 
           </tr>
@@ -191,7 +193,7 @@
 <span ng-show="link.services" class="FirSpanLeft">SERVICES: </span>
           <div class="tag-services">
             <span ng-repeat="item in link.services">
-              <span class="services ">{{item || '&nbsp;'}},</span>
+              <span class="services ">{{item || '&nbsp;'}}{{$last ? '' : ','}}</span>
             </span>
           </div>
 
@@ -199,6 +201,9 @@
       </div>
 
       <div class="tag-level">
+        <span class="project-link">
+          <a  ng-href="https://streams-github-samples.mybluemix.net/?get={{link.base}}" class="hrefLink" target="_blank">Download zip</a>
+        </span>
         <span ng-show="{{ (link.blogPost && link.blogPost !== '')}}" class="project-link">
           <a data-track-action="link-blog" data-track-label="{{link.blogPost}}" href="{{link.blogPost}}" class="hrefLink" target="_blank">Blog Post</a>
         </span>
@@ -227,7 +232,7 @@
               <a  href="http://ibmstreams.github.io/tutorials/">IBM Streams Tutorials Hub</a><br/>
               <a  href="https://www.ibm.com/support/knowledgecenter/SSCRJU_4.2.0/com.ibm.streams.welcome.doc/doc/kc-homepage.html">IBM Streams Documentation</a>
         </td>  <td style="width: 50%; vertical-align: top"><h3>Contribute</h3>
-                <a href="https://github.com/IBMStreams/samples/wiki/How-to-add-a-sample-to-the-catalog"> Add a sample</a><br/>
+                <a href="https://github.com/IBMStreams/samples/wiki/Adding-a-sample-to-the-catalog-and-repo"> How to add a new sample</a><br/>
                 <a href="https://developer.ibm.com/streamsdev/docs/contribute-github-project/">Contribute to a Streams Github project</a>
             </td>
 
